@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PJS : Password generator</title>
+	<link rel="stylesheet" href="bower_components/skeleton/css/normalize.css">
+	<link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="container">
+		<br><br><br>
+
+		<h1 class="text-center">Password Generator</h1>
+
+		<br><br>
+		<form id="passwordGator">
+
+		<div class="checkboxes row">
+
+
+
+			<label for="upperCase" title="capital letter">
+
+				<input id="upperCase" type="checkbox">
+				<span>ABC</span>
+
+			</label>
+
+			<label for="lowerCase" title="small letter">
+
+				<input id="lowerCase" type="checkbox">
+				<span>abc</span>
+
+			</label>
+
+			<label for="digits" title="digits / numbers">
+
+				<input id="digits" type="checkbox">
+				<span>123</span>
+
+			</label>
+
+			<label for="symbols" title="small letter">
+
+				<input id="symbols" type="checkbox">
+				<span>@&$</span>
+
+			</label>
+
+			<!-- <label for="checkall" title="capital letter">
+
+				<input id="checkall" type="checkbox">
+				<span>All</span>
+
+			</label> -->
+
+		</div>
+
+			<select name="pass-length">
+				<!-- <option value="">Select length</option> -->
+				<option value="8">8 characters</option>
+				<option value="10">10 characters</option>
+				<option value="12">12 characters</option>
+				<option value="14">14 characters</option>
+				<option value="16">16 characters</option>
+				<option value="18">18 characters</option>
+				<option value="20">20 characters</option>
+			</select>
+
+
+			<br>
+
+			<div class="row">
+				<input class="column twelve"
+							id="generatedPass"
+							readonly=""
+							placeholder="pass goes hers"
+							type="text">
+				<a href="#" class="button" id="generate">Generate</a>
+
+			</div>
+
+		</form>
+
+	</div>
+	<br>
+	<br>
+	<p class="text-center">
+		you can text yout password strength <b><a target="_blank" href="https://howsecureismypassword.net/">here</a></b>
+	</p>
+
+
+
+
+<script src="main.js"></script>
+</body>
+</html>

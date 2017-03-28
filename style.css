@@ -1,0 +1,11 @@
+
+form{
+	margin:0 auto;
+	width: 80%;
+	max-width: 100%;
+}
+
+.checkboxes label{
+	display: inline-block;
+	margin: 0 15px;
+}
