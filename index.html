@@ -3,9 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>PJS : Password generator</title>
-	<link rel="stylesheet" href="bower_components/skeleton/css/normalize.css">
-	<link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+
+	<style>
+
+		form{
+			margin:0 auto;
+			width: 80%;
+			max-width: 100%;
+		}
+
+		.checkboxes label{
+			display: inline-block;
+			margin: 0 15px;
+		}
+
+	</style>
 </head>
 <body>
 
@@ -58,6 +72,8 @@
 
 		</div>
 
+		<br>
+
 			<select name="pass-length">
 				<!-- <option value="">Select length</option> -->
 				<option value="8">8 characters</option>
@@ -69,8 +85,12 @@
 				<option value="20">20 characters</option>
 			</select>
 
+			<a href="#" class="button" id="generate">Generate</a>
+			<span> double click on the password to copy!</span>
 
 			<br>
+			<br>
+
 
 			<div class="row">
 				<input class="column twelve"
@@ -78,8 +98,6 @@
 							readonly=""
 							placeholder="pass goes hers"
 							type="text">
-				<a href="#" class="button" id="generate">Generate</a>
-
 			</div>
 
 		</form>

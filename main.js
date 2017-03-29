@@ -23,15 +23,10 @@ selectInput.onchange = function () {
   console.log(selectInput.value);
 }
 
+  chars = "";
 
-// function checkedBoxes(elements) {
-//   for (var i = 0; i < elements.length;i++){
-//     if(elments[i].checked){
-//     }
-//   }
-// }
+// generating
 generateBtn.onclick = function () {
-  chars = ""; // final Chars
   passOutput.value = '';
 
   for (var i = 0; i < checkboxes.length;i++){
@@ -50,13 +45,15 @@ generateBtn.onclick = function () {
 
       }
 
-    }else if (passOutput.value === undefined){
-      passOutput.style.display = 'none';
+    }else{
 
     }
   } // end for loop
 
   // console.log(chars);
+
+
+	if(checkboxes.length)
 
   for(var i = 0; i < selectInput.value; i++){
     rdNum = Math.floor(Math.random() * chars.length);
