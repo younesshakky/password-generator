@@ -1,29 +1,41 @@
 
 
-
+// characters
 var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 		lowerCase = 'abcdefghijklmnopqrstuvwxyz',
 		digits = '0123456789',
-		symbols = '@*!#&=+-_';
+		symbols = '@*!#$àç&=+-_';
 
-var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-var generateBtn = document.querySelector('#generate');
-
-var passOutput = document.querySelector('#generatedPass');
-
-var selectInput = document.querySelector('select');
+// elements
+var checkboxes = document.querySelectorAll('input[type="checkbox"]'),
+		generateBtn = document.querySelector('#generate'),
+		passOutput = document.querySelector('#generatedPass'),
+		selectInput = document.querySelector('select'),
+		chars;
 
 
 passOutput.onclick = function () {
-  this.select();
+	var st = document.getElementById('status');
+
+	if(passOutput.value === ''){
+		st.innerText = 'nothing to copy';
+			setTimeout(function() {
+				st.innerText = '';
+			}, 500);
+	}else{
+		this.select();
+		document.execCommand('copy');
+		st.innerText = 'copied';
+		setTimeout(function() {
+				st.innerText = '';
+		}, 500);
+	}
+
 }
 
 selectInput.onchange = function () {
   console.log(selectInput.value);
 }
-
-  chars = "";
 
 // generating
 generateBtn.onclick = function () {
@@ -44,16 +56,10 @@ generateBtn.onclick = function () {
         chars += symbols;
 
       }
+    }else {
 
-    }else{
-
-    }
+		}
   } // end for loop
-
-  // console.log(chars);
-
-
-	if(checkboxes.length)
 
   for(var i = 0; i < selectInput.value; i++){
     rdNum = Math.floor(Math.random() * chars.length);
